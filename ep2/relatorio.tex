@@ -1,0 +1,48 @@
+\documentclass{article}
+
+\begin{document}
+	\paragraph{}Para compilar o ep2 basta dar make no terminal e $./ep2 <nome arquivo.dat>$ para executá-lo usando o arquivo .dat escolhido como definido no enunciado.
+	\paragraph{}Os testes foram feitos usando um i7-4500U CPU @ 1.8 GHz e 8 GB de RAM.
+	\paragraph{Parte 1: Sistemas definidos positivos} Os resultados tiveram uma diferença significativa para problemas dados entre as implementações orientados a coluna e a linha, principalmente entre os problemas com n grande. Sendo os melhores tempo os por linha, já que, a linguagem utilizada foi C.
+	\begin{table}[h]
+		\centering
+		\vspace{0.1cm}
+	\begin{tabular}{r|r|r|r|r|r|r}
+		Problema & cholcol & forwcol & backcol & cholrow & forwrow & backrow\\
+		\hline
+		1 & 0.004556 & 0.000140 & 0.000137 & 0.003550 & 0.000132 & 0.000123 \\
+		2 & 0.043498 & 0.000362 & 0.000301 & 0.036245 & 0.000484 & 0.000317 \\
+		3 & 0.117948 & 0.001343 & 0.000932 & 0.087939 & 0.000951 & 0.000713 \\
+		4 & 0.238581 & 0.002475 & 0.001717 & 0.209548 & 0.000996 & 0.000978 \\
+		5 & 0.414539 & 0.002191 & 0.002124 & 0.362103 & 0.001555 & 0.001536 \\
+		6 & 0.731586 & 0.003469 & 0.004372 & 0.619970 & 0.002447 & 0.003801 \\
+		7 & 1.173883 & 0.004746 & 0.004662 & 1.009653 & 0.003022 & 0.003775
+	\end{tabular}
+	\end{table}
+	
+	\paragraph{} As matrizes positivo definidas de testes foram geradas pelo genmatsin.c com n igual a 100, 200, ..., 700 para os testes.
+
+	
+	\paragraph{Parte 2: sistemas gerais} Assim como previsto, para os sistemas gerais, os métodos foram executados mais rápidos orientado a linha do que a coluna pois foi feito em C, que guarda as matrizes em linhas. E em todos os testes feitos o tempo executado por linha foi mais rápido que o orientado a coluna, com exceção do teste com n = 100, onde tiveram teste que os tempos foram bem parecidos e as vezes com o tempo um pouquinho maior que o por coluna, porém julgo como errado já que outras coisas podem afetar o resultado do tempo além do algoritmo feito, ainda mais com um n tão pequeno. E como pode ser visto na tabela quanto maior o n mais eficiente é o orientado a linha em relação ao orientado a coluna:
+	
+	\begin{table}[h]
+		\centering
+		\vspace{0.1cm}
+		\begin{tabular}{r|r|r|r|r}
+			Problema & PA = LU & LUx = Pb & PA = LU & LUx = Pb\\
+			\hline
+			1 & 0.005329 & 0.000119 & 0.005027 & 0.000123 \\
+			2 & 0.045434 & 0.000401 & 0.042997 & 0.000324 \\
+			3 & 0.175075 & 0.000865 & 0.141306 & 0.000791 \\
+			4 & 0.390028 & 0.001510 & 0.312168 & 0.001346 \\
+			5 & 0.788581 & 0.002498 & 0.589043 & 0.002093 \\
+			6 & 1.399397 & 0.003737 & 1.002722 & 0.003040 \\
+			7 & 2.368173 & 0.021937 & 1.591310 & 0.013574
+		\end{tabular}
+	\end{table}
+
+	\paragraph{} A segunda e a terceira coluna são os métodos orientados a coluna e a quarta e quinta orientadas a colunas.
+	
+	\paragraph{} As matrizes positivo definidas de testes foram geradas pelo genmat.c e assim como na parte 1 as matrizes tem tamanho n igual a 100, 200, ..., 700 para os testes, como definido no enunciado.
+		
+\end{document}

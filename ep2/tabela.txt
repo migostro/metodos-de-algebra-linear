@@ -1,0 +1,55 @@
+100
+cholcol: 0.004400
+forwcol: 0.000140
+backcol: 0.000137
+cholrow: 0.005144
+forwrow: 0.000132
+backrow: 0.000123
+
+200
+cholcol: 0.032993
+forwcol: 0.000362
+backcol: 0.000301
+cholrow: 0.035616
+forwrow: 0.000484
+backrow: 0.000317
+
+300
+cholcol: 0.103476
+forwcol: 0.001343
+backcol: 0.000932
+cholrow: 0.091061
+forwrow: 0.000951
+backrow: 0.000713
+
+400
+cholcol: 0.193076
+forwcol: 0.002475
+backcol: 0.001717
+cholrow: 0.219616
+forwrow: 0.000996
+backrow: 0.000978
+
+500
+cholcol: 0.414539
+forwcol: 0.002191
+backcol: 0.002124
+cholrow: 0.362103
+forwrow: 0.001555
+backrow: 0.001536
+
+600
+cholcol: 0.731586
+forwcol: 0.003469
+backcol: 0.004372
+cholrow: 0.619970
+forwrow: 0.002447
+backrow: 0.003801
+
+700
+cholcol: 1.094928
+forwcol: 0.004746
+backcol: 0.004662
+cholrow: 0.973550
+forwrow: 0.003022
+backrow: 0.003775
